@@ -24,27 +24,33 @@ const WorkQuote =async () => {
 
 }
 
-	/**
-	 * @type {HTMLElement | null}
-	 */
-	let el;
-
+setInterval(() => {
 	
-onMount(() => {
-	createScene(el)
 	WorkQuote()
+}, 4000);
+/**
+ * @type {HTMLElement | null}
+ */
+let el;
+
+
+onMount(() => {
+	WorkQuote()
+	createScene(el)
   });
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Backr00m</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
-<div class="w-screen flex items-center flex-col justify-center ">
-	<div class="bg-black text-green-500 flex flex-col justify-center items-center p-5 w-screen ">
-		<p class="text-xl font-mono">{quoteDone}</p>
-		<p id="text-xl font-mono">~{authorDone}</p>
+<div class="w-screen text-green-500 bg-black font-mono">
+	<canvas class="absolute bottom-0" bind:this={el}></canvas>
+	<div class="font-bold bottom-0 text-5xl p-4 absolute ">__COMING_SOON__</div>
+	<div class="flex flex-col justify-center items-center top-0 absolute right-0 p-4">
+		<!-- <div id="text-xl absolute left-0">Bharat Mishra</div> -->
+		<p class="text-xl ">{quoteDone}</p>
+		<p id="text-5xl">~{authorDone}</p>
 	</div>
-	<canvas class="h-full" bind:this={el}></canvas>
 </div>
  
