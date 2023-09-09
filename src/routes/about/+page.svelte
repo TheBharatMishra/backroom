@@ -5,5 +5,5 @@
 
 <div class="text-column">
 	<h1>About this app</h1>
-<p>I am Bharat Mishra I made this app using </p>
+<p>I am Bharat Mishra I made this app. </p>
 </div>
